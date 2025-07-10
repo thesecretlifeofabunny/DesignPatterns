@@ -1,16 +1,17 @@
-## DesignPatterns
+# DesignPatterns
 Practicing Design Patterns in C#
 
-## ToDo
-
-# Creational Patterns
+# ToDo
+- implement each idea
+  
+## Creational Patterns
 - Abstract Factory : ❌ 
 - Builder : ❌  
 - Factory Method : ❌ 
 - Prototype : ❌ 
 - Singleton : ❌ 
 
-# Structural Patterns
+## Structural Patterns
 - Adapter : ❌ 
 - Bridge : ❌ 
 - Composite : ❌ 
@@ -18,7 +19,7 @@ Practicing Design Patterns in C#
 - Flyweight : ❌ 
 - Proxy : ❌ 
 
-# Behavioral Patterns
+## Behavioral Patterns
 - Chain of Responsibility : ❌ 
 - Command : ❌ 
 - Interpreter : ❌ 
