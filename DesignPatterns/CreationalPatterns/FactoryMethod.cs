@@ -4,19 +4,29 @@ namespace DesignPatterns.CreationalPatterns;
 
 public class FactoryMethod
 {
-    public static void GenerateRandomVehicle()
+    private const int CountOfImplementedVehicles = 3;
+    
+    public static IVehicle? GenerateRandomVehicle()
     {
         Random randomVehicleGenerator = new();
-
-        // TODO return the corresponding vehicle
-        switch (randomVehicleGenerator.Next() % 3)
+        var randomVehicleGeneratedSeed = randomVehicleGenerator.Next() % CountOfImplementedVehicles;
+        
+        switch (randomVehicleGeneratedSeed)
         {
             case 0:
-                break;
+                Van randomVan = new();
+                randomVan.SelfRandomizedPopulate();
+                return randomVan;
             case 1:
-                break;
+                Truck randomTruck = new();
+                randomTruck.SelfRandomizedPopulate();
+                return randomTruck;
             case 2:
-                break;
+                Motorcycle randomMotorcycle = new();
+                randomMotorcycle.SelfRandomizedPopulate();
+                return randomMotorcycle;
+            default:
+                return null;        
         }
     }
 }

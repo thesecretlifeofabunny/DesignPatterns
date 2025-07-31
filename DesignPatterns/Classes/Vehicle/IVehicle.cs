@@ -15,8 +15,8 @@ public interface IVehicle
     public double Value { get; set; }
 
     public int SeatCount { get; set; }
+
+    public void SelfRandomizedPopulate();
     
     public string? ToString();
-
-    public IVehicle GetRandomizedVehicle();
 }

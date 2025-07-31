@@ -1,16 +1,6 @@
 namespace DesignPatterns.Classes.Vehicle;
 
-public class Truck(
-    string manufacturer,
-    string nameOfVehicle,
-    int numberOfWheels,
-    DriveType typeOfDrive,
-    int mileage,
-    double value,
-    int seatCount,
-    double truckBedSize,
-    double towWeightCapacity)
-    : IVehicle
+public class Truck : IVehicle
 {
 
     private readonly string[] _randomManufacturerOptions = ["GMC", "Ford", "Toyota", "Dodge", "Rivian"];
@@ -23,26 +13,26 @@ public class Truck(
         {"Rivian", ["R1T"]}
     };
     private readonly int[] _randomWheelOptions = [4, 6, 8];
+
+    public string Manufacturer { get; set; } = string.Empty;
+
+    public string NameOfVehicle { get; set; } = string.Empty;
+
+    public int NumberOfWheels { get; set; }
+
+    public DriveType TypeOfDrive { get; set; }
+
+    public int Mileage { get; set; }
+
+    public double Value { get; set; }
+
+    public int SeatCount { get; set; }
+
+    private double TruckBedSize { get; set; }
+
+    private double TowWeightCapacity { get; set; }
     
-    public string Manufacturer { get; set; } = manufacturer;
-
-    public string NameOfVehicle { get; set; } = nameOfVehicle;
-
-    public int NumberOfWheels { get; set; } = numberOfWheels;
-
-    public DriveType TypeOfDrive { get; set; } = typeOfDrive;
-
-    public int Mileage { get; set; } = mileage;
-
-    public double Value { get; set; } = value;
-
-    public int SeatCount { get; set; } = seatCount;
-
-    private double TruckBedSize { get; set; } = truckBedSize;
-
-    private double TowWeightCapacity { get; set; } = towWeightCapacity;
-    
-    public IVehicle GetRandomizedVehicle()
+    public void SelfRandomizedPopulate()
     {
         Random randomGenerator = new();
         var randomManufacturerSeed = randomGenerator.Next() % _randomManufacturerOptions.Length;
@@ -93,21 +83,19 @@ public class Truck(
         const int randomTowWeightCapacityLowerLimit = 2000;
         const int randomTowWeightCapacityUpperLimit = 15000;
         var randomTowWeightCapacity = randomGenerator.Next(randomTowWeightCapacityLowerLimit, randomTowWeightCapacityUpperLimit);
-        
-        return new Truck(
-            randomManufacturer,
-            randomVehicleName,
-            randomWheelCount,
-            randomDriveType,
-            randomMileage,
-            randomValue,
-            randomSeatCount,
-            randomTruckBedSize,
-            randomTowWeightCapacity
-            );
+
+        Manufacturer = randomManufacturer;
+        NameOfVehicle = randomVehicleName;
+        NumberOfWheels = randomWheelCount;
+        TypeOfDrive = randomDriveType;
+        Mileage = randomMileage;
+        Value = randomValue;
+        SeatCount = randomSeatCount;
+        TruckBedSize = randomTruckBedSize;
+        TowWeightCapacity = randomTowWeightCapacity;
     }
 
-    public override string? ToString()
+    public override string ToString()
     {
         var advertisementString =
             $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive} and {NumberOfWheels} wheels" + 
@@ -115,7 +103,6 @@ public class Truck(
             $"Also not to mention the truck bed size of {TruckBedSize}feet squared," +
             $" and a tow capacity of {TowWeightCapacity}kg!!!";
         
-        Console.WriteLine(advertisementString);
-        return null;
+        return advertisementString;
     }
 }
