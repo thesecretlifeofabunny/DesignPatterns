@@ -3,7 +3,6 @@ namespace DesignPatterns.Classes.Vehicle;
 public class Motorcycle(
     string manufacturer,
     string nameOfVehicle,
-    int numberOfWheels,
     DriveType typeOfDrive,
     int mileage,
     double value,
@@ -15,7 +14,7 @@ public class Motorcycle(
 
     public string NameOfVehicle { get; set; } = nameOfVehicle;
 
-    public int NumberOfWheels { get; set; } = numberOfWheels;
+    public int NumberOfWheels { get; set; } = 2;
 
     public DriveType TypeOfDrive { get; set; } = typeOfDrive;
 
@@ -25,5 +24,27 @@ public class Motorcycle(
 
     public int SeatCount { get; set; } = seatCount;
 
-    public bool HasSideCar { get; set; } = hasSideCar;
+    private bool HasSideCar { get; } = hasSideCar;
+
+    public IVehicle GetRandomizedVehicle()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override string? ToString()
+    {
+        var advertisementString =
+            $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive}" + 
+            $"with only a mileage of {Mileage} KMs and a value at ${Value}";
+
+        if (HasSideCar)
+        {
+            advertisementString += $"and side car!!!";
+        }
+
+        advertisementString += "!";
+        
+        Console.WriteLine(advertisementString);
+        return null;
+    }
 }

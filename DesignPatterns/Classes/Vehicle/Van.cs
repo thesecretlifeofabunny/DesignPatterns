@@ -9,7 +9,7 @@ public class Van(
     double value,
     int seatCount,
     double storageCapacity,
-    bool foldableSeat)
+    bool foldableSeat) : IVehicle
 {
     public string Manufacturer { get; set; } = manufacturer;
 
@@ -25,7 +25,28 @@ public class Van(
 
     public int SeatCount { get; set; } = seatCount;
 
-    public double StorageCapacity { get; set; } = storageCapacity;
+    private double StorageCapacity { get; set; } = storageCapacity;
 
-    public bool FoldableSeat { get; set; } = foldableSeat;
+    private bool FoldableSeat { get; set; } = foldableSeat;
+    
+    public IVehicle GetRandomizedVehicle()
+    {
+        throw new NotImplementedException();
+    }
+
+    public override string? ToString()
+    {
+        var advertisementString =
+            $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive}" + 
+            $"with only a mileage of {Mileage} KMs and a value at ${Value}!" +
+            $"Also not to mention the storage capacity of {StorageCapacity}inches squared.";
+
+        if (FoldableSeat)
+        {
+            advertisementString += "This also comes with a row of foldable seats!";
+        }
+        
+        Console.WriteLine(advertisementString);
+        return null;
+    }
 }
