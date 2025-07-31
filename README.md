@@ -7,7 +7,7 @@ Practicing Design Patterns in C#
 ## Creational Patterns
 - Abstract Factory : ❌ 
 - Builder : ❌  
-- Factory Method : ❌ 
+- Factory Method : ✅ 
 - Prototype : ❌ 
 - Singleton : ❌ 
 
