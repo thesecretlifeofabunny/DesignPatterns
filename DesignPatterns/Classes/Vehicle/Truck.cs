@@ -99,8 +99,8 @@ public class Truck : IVehicle
     {
         var advertisementString =
             $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive} and {NumberOfWheels} wheels" + 
-            $"with only a mileage of {Mileage} KMs and a value at ${Value}!" +
-            $"Also not to mention the truck bed size of {TruckBedSize}feet squared," +
+            $" with only a mileage of {Mileage} KMs and a value at ${Value}!" +
+            $" Also not to mention the truck bed size of {TruckBedSize}feet squared," +
             $" and a tow capacity of {TowWeightCapacity}kg!!!";
         
         return advertisementString;

@@ -75,11 +75,11 @@ public class Motorcycle : IVehicle
     {
         var advertisementString =
             $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive}" + 
-            $"with only a mileage of {Mileage} KMs and a value at ${Value}";
+            $" with only a mileage of {Mileage} KMs and a value at ${Value}";
 
         if (HasSideCar)
         {
-            advertisementString += $"and side car!!!";
+            advertisementString += $" and side car!!!";
         }
 
         advertisementString += "!";

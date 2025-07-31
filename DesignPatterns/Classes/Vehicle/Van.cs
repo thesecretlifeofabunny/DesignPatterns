@@ -91,8 +91,8 @@ public class Van : IVehicle
     {
         var advertisementString =
             $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive}" + 
-            $"with only a mileage of {Mileage} KMs and a value at ${Value}!" +
-            $"Also not to mention the storage capacity of {StorageCapacity}inches squared.";
+            $" with only a mileage of {Mileage} KMs and a value at ${Value}!" +
+            $" Also not to mention the storage capacity of {StorageCapacity}inches squared.";
 
         if (FoldableSeat)
         {
