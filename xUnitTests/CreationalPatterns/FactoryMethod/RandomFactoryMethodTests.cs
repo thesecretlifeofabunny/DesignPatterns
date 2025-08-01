@@ -1,22 +1,21 @@
-using DesignPatterns.CreationalPatterns;
 using Xunit.Abstractions;
 
-namespace xUnitTests;
+namespace xUnitTests.CreationalPatterns.FactoryMethod;
 
-public class FactoryMethodTests(ITestOutputHelper testOutputHelper)
+public class RandomFactoryMethodTests(ITestOutputHelper testOutputHelper)
 {
     [Fact]
-    public void FactoryMethod_GenerateRandomVehicle_ReturnsNonNullObject()
+    public void RandomFactoryMethod_GenerateRandomVehicle_ReturnsNonNullObject()
     {
-        var randomlyGeneratedVehicle = FactoryMethod.GenerateRandomVehicle();
+        var randomlyGeneratedVehicle = DesignPatterns.CreationalPatterns.FactoryMethod.RandomFactoryMethod.GenerateRandomVehicle();
         
         Assert.True(randomlyGeneratedVehicle is not null);
     }
     
     [Fact]
-    public void FactoryMethod_GenerateRandomVehicle_ReturnsNonNullToString()
+    public void RandomFactoryMethod_GenerateRandomVehicle_ReturnsNonNullToString()
     {
-        var randomlyGeneratedVehicle = FactoryMethod.GenerateRandomVehicle();
+        var randomlyGeneratedVehicle = DesignPatterns.CreationalPatterns.FactoryMethod.RandomFactoryMethod.GenerateRandomVehicle();
 
         if (randomlyGeneratedVehicle is null)
         {
@@ -31,9 +30,9 @@ public class FactoryMethodTests(ITestOutputHelper testOutputHelper)
     }
     
     [Fact]
-    public void FactoryMethod_GenerateRandomVehicle_HasNonNullOrWhitespaceManufacturer()
+    public void RandomFactoryMethod_GenerateRandomVehicle_HasNonNullOrWhitespaceManufacturer()
     {
-        var randomlyGeneratedVehicle = FactoryMethod.GenerateRandomVehicle();
+        var randomlyGeneratedVehicle = DesignPatterns.CreationalPatterns.FactoryMethod.RandomFactoryMethod.GenerateRandomVehicle();
 
         if (randomlyGeneratedVehicle is null)
         {
@@ -46,9 +45,9 @@ public class FactoryMethodTests(ITestOutputHelper testOutputHelper)
     }
     
     [Fact]
-    public void FactoryMethod_GenerateRandomVehicle_HasNonNullOrWhitespaceName()
+    public void RandomFactoryMethod_GenerateRandomVehicle_HasNonNullOrWhitespaceName()
     {
-        var randomlyGeneratedVehicle = FactoryMethod.GenerateRandomVehicle();
+        var randomlyGeneratedVehicle = DesignPatterns.CreationalPatterns.FactoryMethod.RandomFactoryMethod.GenerateRandomVehicle();
 
         if (randomlyGeneratedVehicle is null)
         {
@@ -61,9 +60,9 @@ public class FactoryMethodTests(ITestOutputHelper testOutputHelper)
     }
     
     [Fact]
-    public void FactoryMethod_GenerateRandomVehicle_HasNonZeroAmountOfWheels()
+    public void RandomFactoryMethod_GenerateRandomVehicle_HasNonZeroAmountOfWheels()
     {
-        var randomlyGeneratedVehicle = FactoryMethod.GenerateRandomVehicle();
+        var randomlyGeneratedVehicle = DesignPatterns.CreationalPatterns.FactoryMethod.RandomFactoryMethod.GenerateRandomVehicle();
 
         if (randomlyGeneratedVehicle is null)
         {
@@ -76,9 +75,9 @@ public class FactoryMethodTests(ITestOutputHelper testOutputHelper)
     }
     
     [Fact]
-    public void FactoryMethod_GenerateRandomVehicle_HasNonNullTypeOfDrive()
+    public void RandomFactoryMethod_GenerateRandomVehicle_HasNonNullTypeOfDrive()
     {
-        var randomlyGeneratedVehicle = FactoryMethod.GenerateRandomVehicle();
+        var randomlyGeneratedVehicle = DesignPatterns.CreationalPatterns.FactoryMethod.RandomFactoryMethod.GenerateRandomVehicle();
 
         if (randomlyGeneratedVehicle is null)
         {
@@ -91,9 +90,9 @@ public class FactoryMethodTests(ITestOutputHelper testOutputHelper)
     }
     
     [Fact]
-    public void FactoryMethod_GenerateRandomVehicle_HasNonNegativeMileage()
+    public void RandomFactoryMethod_GenerateRandomVehicle_HasNonNegativeMileage()
     {
-        var randomlyGeneratedVehicle = FactoryMethod.GenerateRandomVehicle();
+        var randomlyGeneratedVehicle = DesignPatterns.CreationalPatterns.FactoryMethod.RandomFactoryMethod.GenerateRandomVehicle();
 
         if (randomlyGeneratedVehicle is null)
         {
@@ -106,9 +105,9 @@ public class FactoryMethodTests(ITestOutputHelper testOutputHelper)
     }
     
     [Fact]
-    public void FactoryMethod_GenerateRandomVehicle_HasNonZeroValue()
+    public void RandomFactoryMethod_GenerateRandomVehicle_HasNonNegativeValue()
     {
-        var randomlyGeneratedVehicle = FactoryMethod.GenerateRandomVehicle();
+        var randomlyGeneratedVehicle = DesignPatterns.CreationalPatterns.FactoryMethod.RandomFactoryMethod.GenerateRandomVehicle();
 
         if (randomlyGeneratedVehicle is null)
         {
@@ -121,9 +120,9 @@ public class FactoryMethodTests(ITestOutputHelper testOutputHelper)
     }
     
     [Fact]
-    public void FactoryMethod_GenerateRandomVehicle_HasNonZeroSeatCount()
+    public void RandomFactoryMethod_GenerateRandomVehicle_HasNonZeroSeatCount()
     {
-        var randomlyGeneratedVehicle = FactoryMethod.GenerateRandomVehicle();
+        var randomlyGeneratedVehicle = DesignPatterns.CreationalPatterns.FactoryMethod.RandomFactoryMethod.GenerateRandomVehicle();
 
         if (randomlyGeneratedVehicle is null)
         {
@@ -132,6 +131,6 @@ public class FactoryMethodTests(ITestOutputHelper testOutputHelper)
         
         var generatedVehicleSeatCount = randomlyGeneratedVehicle.SeatCount;
         
-        Assert.True(generatedVehicleSeatCount >= 0);
+        Assert.True(generatedVehicleSeatCount > 0);
     }
 }

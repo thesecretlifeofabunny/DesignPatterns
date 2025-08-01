@@ -16,6 +16,8 @@ public interface IVehicle
 
     public int SeatCount { get; set; }
 
+    public void RegenerateVehicle();
+    
     public void SelfRandomizedPopulate();
     
     public string? ToString();

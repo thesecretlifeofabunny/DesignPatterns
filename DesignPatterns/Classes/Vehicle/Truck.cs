@@ -28,9 +28,11 @@ public class Truck : IVehicle
 
     public int SeatCount { get; set; }
 
-    private double TruckBedSize { get; set; }
+    public double TruckBedSize { get; set; }
 
-    private double TowWeightCapacity { get; set; }
+    public double TowWeightCapacity { get; set; }
+    
+    public void RegenerateVehicle() => SelfRandomizedPopulate();
     
     public void SelfRandomizedPopulate()
     {

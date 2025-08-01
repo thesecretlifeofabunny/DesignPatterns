@@ -29,6 +29,8 @@ public class Motorcycle : IVehicle
 
     private bool HasSideCar { get; set; }
 
+    public void RegenerateVehicle() => SelfRandomizedPopulate();
+
     public void SelfRandomizedPopulate()
     {
         Random randomGenerator = new();

@@ -26,9 +26,11 @@ public class Van : IVehicle
 
     public int SeatCount { get; set; }
 
-    private double StorageCapacity { get; set; }
+    public double StorageCapacity { get; set; }
 
     private bool FoldableSeat { get; set; }
+    
+    public void RegenerateVehicle() => SelfRandomizedPopulate();
     
     public void  SelfRandomizedPopulate()
     {

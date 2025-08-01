@@ -1,8 +1,8 @@
 using DesignPatterns.Classes.Vehicle;
 
-namespace DesignPatterns.CreationalPatterns;
+namespace DesignPatterns.CreationalPatterns.FactoryMethod;
 
-public class FactoryMethod
+public abstract class RandomFactoryMethod
 {
     private const int CountOfImplementedVehicles = 3;
     
