@@ -8,7 +8,9 @@ public class SingletonTests
     [Fact]
     public void Singleton_LazyInitializeFountain_ReturnFountainIsNotInUse()
     {
-        var isWaterFountainInUse = WaterFountainSingleton.IsFountainInUse;
+        var waterFountain = WaterFountainSingleton.WaterFountain;
+        
+        var isWaterFountainInUse = waterFountain.IsFountainInUse;
         
         Assert.False(isWaterFountainInUse);
     }
@@ -16,8 +18,10 @@ public class SingletonTests
     [Fact]
     public void Singleton_StartUsingFountain_ReturnFountainIsInUse()
     {
-        WaterFountainSingleton.StartUsingFountain();
-        var isWaterFountainInUse = WaterFountainSingleton.IsFountainInUse;
+        var waterFountain = WaterFountainSingleton.WaterFountain;
+        
+        waterFountain.StartUsingFountain();
+        var isWaterFountainInUse = waterFountain.IsFountainInUse;
         
         Assert.True(isWaterFountainInUse);
     } 
@@ -25,9 +29,11 @@ public class SingletonTests
     [Fact]
     public void Singleton_StartUsingFountainThenStop_ReturnFountainIsNotInUse()
     {
-        WaterFountainSingleton.StartUsingFountain();
-        WaterFountainSingleton.StopUsingFountain();
-        var isWaterFountainInUse = WaterFountainSingleton.IsFountainInUse;
+        var waterFountain = WaterFountainSingleton.WaterFountain;
+        
+        waterFountain.StartUsingFountain();
+        waterFountain.StopUsingFountain();
+        var isWaterFountainInUse = waterFountain.IsFountainInUse;
         
         Assert.False(isWaterFountainInUse);
     } 
