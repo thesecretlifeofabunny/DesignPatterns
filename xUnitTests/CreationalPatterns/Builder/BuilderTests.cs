@@ -115,7 +115,7 @@ public class BuilderTests()
     {
         foreach (var ingredientFromListOne in listOne)
         {
-            if (listTwo.Count == 0 || !listTwo.Contains(ingredientFromListOne)) return false;
+            if (!listTwo.Contains(ingredientFromListOne)) return false;
 
             listTwo.Remove(ingredientFromListOne);
         }
