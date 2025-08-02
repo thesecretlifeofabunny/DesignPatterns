@@ -12,6 +12,4 @@ public sealed class WaterFountainSingleton
     public void StartUsingFountain() => IsFountainInUse = true;
 
     public void StopUsingFountain() => IsFountainInUse = false;
-
-    private WaterFountainSingleton() {}
 }

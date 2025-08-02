@@ -2,7 +2,6 @@ using DesignPatterns.CreationalPatterns.Singleton;
 
 namespace xUnitTests.CreationalPatterns.Singleton;
 
-// TODO figure out thread safe / smart way to test a singleton using unit testing...
 public class SingletonTests
 {
     [Fact]
@@ -24,7 +23,7 @@ public class SingletonTests
         var isWaterFountainInUse = waterFountain.IsFountainInUse;
         
         Assert.True(isWaterFountainInUse);
-    } 
+    }
     
     [Fact]
     public void Singleton_StartUsingFountainThenStop_ReturnFountainIsNotInUse()
@@ -36,5 +35,33 @@ public class SingletonTests
         var isWaterFountainInUse = waterFountain.IsFountainInUse;
         
         Assert.False(isWaterFountainInUse);
-    } 
+    }
+    
+    [Fact]
+    public void Singleton_TwoFountainsOneStartsDrinking_SecondFountainReturnsFountainIsInUse()
+    {
+        var waterFountain = WaterFountainSingleton.WaterFountain;
+        var secondWaterFountain = WaterFountainSingleton.WaterFountain;
+        
+        waterFountain.StartUsingFountain();
+        
+        var isWaterFountainInUse = secondWaterFountain.IsFountainInUse;
+        
+        Assert.True(isWaterFountainInUse);
+    }
+    
+    [Fact]
+    public void Singleton_TwoFountainsOneStartsDrinkingAndStopping_SecondFountainReturnsFountainIsInUseThenNotInUse()
+    {
+        var waterFountain = WaterFountainSingleton.WaterFountain;
+        var secondWaterFountain = WaterFountainSingleton.WaterFountain;
+        
+        waterFountain.StartUsingFountain();
+        var wasWaterFountainInUse = secondWaterFountain.IsFountainInUse;
+        waterFountain.StopUsingFountain();
+        var isWaterFountainInUse = secondWaterFountain.IsFountainInUse;
+        
+        Assert.True(wasWaterFountainInUse);
+        Assert.False(isWaterFountainInUse);
+    }
 }
