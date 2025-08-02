@@ -113,12 +113,6 @@ public class BuilderTests()
 
     private static bool CompareTwoRamenIngredientLists(List<RamenIngredient> listOne, List<RamenIngredient> listTwo)
     {
-        foreach (var ingredientFromListOne in listOne)
-        {
-            if (!listTwo.Contains(ingredientFromListOne)) return false;
-
-            listTwo.Remove(ingredientFromListOne);
-        }
-        return true;
+        return listOne.All(listTwo.Remove);
     }
 }
