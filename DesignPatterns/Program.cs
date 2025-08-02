@@ -1,3 +1,1 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-Console.WriteLine("Hello, World!");
+﻿Console.WriteLine("Practicing Design Patterns by the Gang of Four by using xUnit Testing");

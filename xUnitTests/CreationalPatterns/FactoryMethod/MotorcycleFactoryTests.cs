@@ -1,4 +1,3 @@
-using DesignPatterns.Classes.Vehicle;
 using Xunit.Abstractions;
 
 namespace xUnitTests.CreationalPatterns.FactoryMethod;
