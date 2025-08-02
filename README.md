@@ -8,7 +8,7 @@ Practicing Design Patterns in C#
 - Abstract Factory : ✅
 - Builder : ✅
 - Factory Method : ✅ 
-- Prototype : ❌ 
+- Prototype : ✅ 
 - Singleton : ❌ 
 
 ## Structural Patterns
