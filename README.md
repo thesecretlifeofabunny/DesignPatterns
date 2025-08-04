@@ -12,7 +12,7 @@ Practicing Design Patterns in C#
 - Singleton : ✅
 
 ## Structural Patterns
-- Adapter : ❌
+- Adapter : ✅
 - Bridge : ❌
 - Composite : ❌
 - Facade : ❌
