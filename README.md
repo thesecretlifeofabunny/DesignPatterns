@@ -14,7 +14,7 @@ Practicing Design Patterns in C#
 ## Structural Patterns
 - Adapter : ✅
 - Bridge : ✅
-- Composite : ❌
+- Composite : ✅
 - Facade : ❌
 - Flyweight : ❌
 - Proxy : ❌
