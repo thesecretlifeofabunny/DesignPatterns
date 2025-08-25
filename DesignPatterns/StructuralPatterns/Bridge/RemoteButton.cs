@@ -13,7 +13,7 @@ public abstract class RemoteButton(IEntertainmentDevice theDevice)
 
     public abstract int GetRemotesMaxSupportedVolume();
     public void ButtonFivePressed() => TheDevice.ButtonFivePressed();
-    
+
     public void ButtonSixPressed() => TheDevice.ButtonSixPressed();
 
     public int DeviceVolume() => TheDevice.VolumeSetting;

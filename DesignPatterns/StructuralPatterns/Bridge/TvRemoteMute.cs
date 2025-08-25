@@ -16,7 +16,7 @@ public class TvRemoteMute(IEntertainmentDevice theDevice) : RemoteButton(theDevi
     public override void ButtonNinePressed()
     {
         TheDevice.VolumeSetting = 0;
-        
+
         Console.WriteLine("Tv was muted");
     }
 }

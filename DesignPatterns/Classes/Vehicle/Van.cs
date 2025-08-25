@@ -29,10 +29,10 @@ public class Van : IVehicle
     public double StorageCapacity { get; set; }
 
     private bool FoldableSeat { get; set; }
-    
+
     public void RegenerateVehicle() => SelfRandomizedPopulate();
-    
-    public void  SelfRandomizedPopulate()
+
+    public void SelfRandomizedPopulate()
     {
         Random randomGenerator = new();
         var randomManufacturerSeed = randomGenerator.Next() % _randomManufacturerOptions.Length;
@@ -44,7 +44,7 @@ public class Van : IVehicle
         {
             throw new KeyNotFoundException();
         }
-        
+
         if (arrayOfVehicles is null)
         {
             throw new NullReferenceException();
@@ -52,7 +52,7 @@ public class Van : IVehicle
 
         var randomVehicleNameSeed = randomGenerator.Next() % arrayOfVehicles.Length;
         var randomVehicleName = arrayOfVehicles[randomVehicleNameSeed];
-        
+
         var typeOfDriveArray = Enum.GetValues(typeof(DriveType));
         var randomDriveTypeSeed = randomGenerator.Next() % typeOfDriveArray.Length;
         var randomDriveTypeInt = typeOfDriveArray.GetValue(randomDriveTypeSeed);
@@ -65,34 +65,34 @@ public class Van : IVehicle
 
         const int randomMileageUpperLimit = 1000000;
         var randomMileage = randomGenerator.Next(randomMileageUpperLimit);
-        
+
         const int randomValueUpperLimit = 200000;
         var randomValue = randomGenerator.Next(randomValueUpperLimit);
-        
+
         const int randomSeatLowerLimit = 5;
         const int randomSeatCountUpperLimit = 9;
         var randomSeatCount = randomGenerator.Next(randomSeatLowerLimit, randomSeatCountUpperLimit);
-        
+
         const int randomStorageSizeLowerLimit = 18;
         const int randomStorageSizeUpperLimit = 30;
         var randomStorageSize = randomGenerator.Next(randomStorageSizeLowerLimit, randomStorageSizeUpperLimit);
-        
+
         var foldableSeat = randomGenerator.Next() % 2 == 0;
 
-            Manufacturer = randomManufacturer;
-            NameOfVehicle = randomVehicleName;
-            TypeOfDrive = randomDriveType;
-            Mileage = randomMileage;
-            Value = randomValue;
-            SeatCount = randomSeatCount;
-            StorageCapacity = randomStorageSize;
-            FoldableSeat = foldableSeat;
+        Manufacturer = randomManufacturer;
+        NameOfVehicle = randomVehicleName;
+        TypeOfDrive = randomDriveType;
+        Mileage = randomMileage;
+        Value = randomValue;
+        SeatCount = randomSeatCount;
+        StorageCapacity = randomStorageSize;
+        FoldableSeat = foldableSeat;
     }
 
     public override string ToString()
     {
         var advertisementString =
-            $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive}" + 
+            $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive}" +
             $" with only a mileage of {Mileage} KMs and a value at ${Value}!" +
             $" Also not to mention the storage capacity of {StorageCapacity}inches squared.";
 

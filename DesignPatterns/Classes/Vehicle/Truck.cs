@@ -31,9 +31,9 @@ public class Truck : IVehicle
     public double TruckBedSize { get; set; }
 
     public double TowWeightCapacity { get; set; }
-    
+
     public void RegenerateVehicle() => SelfRandomizedPopulate();
-    
+
     public void SelfRandomizedPopulate()
     {
         Random randomGenerator = new();
@@ -46,7 +46,7 @@ public class Truck : IVehicle
         {
             throw new KeyNotFoundException();
         }
-        
+
         if (arrayOfVehicles is null)
         {
             throw new NullReferenceException();
@@ -57,7 +57,7 @@ public class Truck : IVehicle
 
         var randomWheelCountSeed = randomGenerator.Next() % _randomWheelOptions.Length;
         var randomWheelCount = _randomWheelOptions[randomWheelCountSeed];
-        
+
         var typeOfDriveArray = Enum.GetValues(typeof(DriveType));
         var randomDriveTypeSeed = randomGenerator.Next() % typeOfDriveArray.Length;
         var randomDriveTypeInt = typeOfDriveArray.GetValue(randomDriveTypeSeed);
@@ -70,18 +70,18 @@ public class Truck : IVehicle
 
         const int randomMileageUpperLimit = 1000000;
         var randomMileage = randomGenerator.Next(randomMileageUpperLimit);
-        
+
         const int randomValueUpperLimit = 200000;
         var randomValue = randomGenerator.Next(randomValueUpperLimit);
-        
+
         const int randomSeatLowerLimit = 5;
         const int randomSeatCountUpperLimit = 7;
         var randomSeatCount = randomGenerator.Next(randomSeatLowerLimit, randomSeatCountUpperLimit);
-        
+
         const int randomTruckBedSizeLowerLimit = 18;
         const int randomTruckBedSizeUpperLimit = 30;
         var randomTruckBedSize = randomGenerator.Next(randomTruckBedSizeLowerLimit, randomTruckBedSizeUpperLimit);
-        
+
         const int randomTowWeightCapacityLowerLimit = 2000;
         const int randomTowWeightCapacityUpperLimit = 15000;
         var randomTowWeightCapacity = randomGenerator.Next(randomTowWeightCapacityLowerLimit, randomTowWeightCapacityUpperLimit);
@@ -100,11 +100,11 @@ public class Truck : IVehicle
     public override string ToString()
     {
         var advertisementString =
-            $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive} and {NumberOfWheels} wheels" + 
+            $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive} and {NumberOfWheels} wheels" +
             $" with only a mileage of {Mileage} KMs and a value at ${Value}!" +
             $" Also not to mention the truck bed size of {TruckBedSize}feet squared," +
             $" and a tow capacity of {TowWeightCapacity}kg!!!";
-        
+
         return advertisementString;
     }
 }

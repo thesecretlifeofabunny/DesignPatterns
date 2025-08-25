@@ -10,7 +10,7 @@ public class TvDevice(int deviceState, int maxSetting) : IEntertainmentDevice
     public int DeviceState { get; set; } = deviceState;
     public int MaxSetting { get; set; } = maxSetting;
     public int VolumeSetting { get; set; }
-    
+
     public void ButtonFivePressed()
     {
         DeviceState--;

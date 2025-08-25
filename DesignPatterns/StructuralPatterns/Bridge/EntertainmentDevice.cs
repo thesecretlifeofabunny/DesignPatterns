@@ -18,7 +18,7 @@ public interface IEntertainmentDevice
     {
         var isDeviceStateOutOfBounds = DeviceState > MaxSetting || DeviceState < 0;
         if (isDeviceStateOutOfBounds) DeviceState = 0;
-        
+
         Console.WriteLine($"The device state is {DeviceState}");
     }
 
@@ -27,7 +27,7 @@ public interface IEntertainmentDevice
         VolumeSetting++;
         Console.WriteLine($"The volume is now at {VolumeSetting}");
     }
-    
+
     public void ButtonEightPressed()
     {
         VolumeSetting--;

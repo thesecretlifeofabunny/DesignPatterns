@@ -5,12 +5,12 @@ namespace DesignPatterns.CreationalPatterns.FactoryMethod;
 public abstract class RandomFactoryMethod
 {
     private const int CountOfImplementedVehicles = 3;
-    
+
     public static IVehicle? GenerateRandomVehicle()
     {
         Random randomVehicleGenerator = new();
         var randomVehicleGeneratedSeed = randomVehicleGenerator.Next() % CountOfImplementedVehicles;
-        
+
         switch (randomVehicleGeneratedSeed)
         {
             case 0:
@@ -26,7 +26,7 @@ public abstract class RandomFactoryMethod
                 randomMotorcycle.SelfRandomizedPopulate();
                 return randomMotorcycle;
             default:
-                return null;        
+                return null;
         }
     }
 }

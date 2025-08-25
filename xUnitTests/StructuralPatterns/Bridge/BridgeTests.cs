@@ -16,30 +16,30 @@ public class BridgeTests
         const int maxSetting = 200;
         const int deviceState = 1;
         RemoteButton theRemoteForTheTv = new TvRemoteMute(new TvDevice(deviceState, maxSetting));
-        
+
         // Act
         theRemoteForTheTv.ButtonFivePressed();
         theRemoteForTheTv.ButtonSixPressed();
         theRemoteForTheTv.ButtonNinePressed();
-        
+
         // Assert
         Assert.Equal(0, theRemoteForTheTv.DeviceVolume());
     }
-    
+
     [Fact]
     public void RemoteButton_TestTvMaxVolume_TvShouldBeAtMaxVolumeWithCorrectButtonpress()
     {
         // Arrange
         const int maxSetting = 200;
         const int deviceState = 1;
-        RemoteButton theRemoteForTheTv = new TvRemoteMaxVolume(new TvDevice(deviceState,maxSetting));
-        
+        RemoteButton theRemoteForTheTv = new TvRemoteMaxVolume(new TvDevice(deviceState, maxSetting));
+
         // Act
         theRemoteForTheTv.ButtonFivePressed();
         theRemoteForTheTv.ButtonSixPressed();
         theRemoteForTheTv.ButtonNinePressed();
-        
+
         // Assert
-        Assert.Equal(theRemoteForTheTv.GetRemotesMaxSupportedVolume() , theRemoteForTheTv.DeviceVolume());
+        Assert.Equal(theRemoteForTheTv.GetRemotesMaxSupportedVolume(), theRemoteForTheTv.DeviceVolume());
     }
 }

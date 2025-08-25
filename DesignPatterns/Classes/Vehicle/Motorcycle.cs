@@ -2,7 +2,7 @@ namespace DesignPatterns.Classes.Vehicle;
 
 public class Motorcycle : IVehicle
 {
-    
+
     private readonly string[] _randomManufacturerOptions = ["BMW", "Royal Enfield", "Triumph", "CFMoto", "Ducati"];
     private readonly Dictionary<string, string[]> _randomNameOfVehicles = new()
     {
@@ -43,7 +43,7 @@ public class Motorcycle : IVehicle
         {
             throw new KeyNotFoundException();
         }
-        
+
         if (arrayOfVehicles is null)
         {
             throw new NullReferenceException();
@@ -51,32 +51,32 @@ public class Motorcycle : IVehicle
 
         var randomVehicleNameSeed = randomGenerator.Next() % arrayOfVehicles.Length;
         var randomVehicleName = arrayOfVehicles[randomVehicleNameSeed];
-        
+
         const int randomMileageUpperLimit = 1000000;
         var randomMileage = randomGenerator.Next(randomMileageUpperLimit);
-        
+
         const int randomValueUpperLimit = 200000;
         var randomValue = randomGenerator.Next(randomValueUpperLimit);
-        
+
         const int randomSeatLowerLimit = 1;
         const int randomSeatCountUpperLimit = 3;
         var randomSeatCount = randomGenerator.Next(randomSeatLowerLimit, randomSeatCountUpperLimit);
-        
+
         var hasSideCar = randomGenerator.Next() % 2 == 0;
 
-            Manufacturer = randomManufacturer;
-            NameOfVehicle = randomVehicleName;
-            Mileage = randomMileage;
-            Value = randomValue;
-            SeatCount = randomSeatCount;
-            HasSideCar = hasSideCar;
+        Manufacturer = randomManufacturer;
+        NameOfVehicle = randomVehicleName;
+        Mileage = randomMileage;
+        Value = randomValue;
+        SeatCount = randomSeatCount;
+        HasSideCar = hasSideCar;
 
     }
 
     public override string ToString()
     {
         var advertisementString =
-            $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive}" + 
+            $"YEEHAW!! We got a {Manufacturer} {NameOfVehicle} with {TypeOfDrive}" +
             $" with only a mileage of {Mileage} KMs and a value at ${Value}";
 
         if (HasSideCar)
@@ -85,7 +85,7 @@ public class Motorcycle : IVehicle
         }
 
         advertisementString += "!";
-        
+
         return advertisementString;
     }
 }

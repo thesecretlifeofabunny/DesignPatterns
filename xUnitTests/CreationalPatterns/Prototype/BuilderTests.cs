@@ -11,50 +11,50 @@ public class PrototypeTests()
     {
         RamenPrototype ramenToTest = new();
         const RamenBroth brothToAdd = RamenBroth.Beef;
-        
+
         RamenBuilder.AddBroth(ramenToTest, brothToAdd);
         var prototypeRamen = ramenToTest.CloneRamenBowl();
-        
+
         Assert.True(prototypeRamen.RamenBroth is brothToAdd);
     }
-    
+
     [Fact]
     public void Prototype_AddBroth_AddsNoodleSelectedThenPrototype()
     {
         RamenPrototype ramenToTest = new();
         const RamenNoodle noodleToAdd = RamenNoodle.Soba;
-        
+
         RamenBuilder.AddNoodle(ramenToTest, noodleToAdd);
         var prototypeRamen = ramenToTest.CloneRamenBowl();
-        
+
         Assert.True(prototypeRamen.RamenNoodle is noodleToAdd);
     }
-    
+
     [Fact]
     public void Prototype_AddBroth_AddedIngredientIsNotNullAfterPrototyping()
     {
         RamenPrototype ramenToTest = new();
         const RamenIngredient ingredientToAdd = RamenIngredient.Bamboo;
-        
+
         RamenBuilder.AddIngredient(ramenToTest, ingredientToAdd);
         var prototypeRamen = ramenToTest.CloneRamenBowl();
-        
+
         Assert.NotNull(prototypeRamen.RamenIngredients);
     }
-    
+
     [Fact]
     public void Prototype_AddBroth_AddsIngredientSelectedAfterPrototyping()
     {
         RamenPrototype ramenToTest = new();
         const RamenIngredient ingredientToAdd = RamenIngredient.Bamboo;
-        
+
         RamenBuilder.AddIngredient(ramenToTest, ingredientToAdd);
         var prototypeRamen = ramenToTest.CloneRamenBowl();
-        
+
         Assert.NotNull(ramenToTest.RamenIngredients);
         Assert.True(prototypeRamen.RamenIngredients is [ingredientToAdd]);
     }
-    
+
     [Fact]
     public void Prototype_AddBroth_AddsTwoIngredientsSelectedAfterPrototyping()
     {
@@ -72,7 +72,7 @@ public class PrototypeTests()
         Assert.NotNull(prototypeRamen.RamenIngredients);
         Assert.True(CompareTwoRamenIngredientLists(prototypeRamen.RamenIngredients, ingredientsToAdd));
     }
-    
+
     [Fact]
     public void Prototype_AddBroth_AddsFiveIngredientsSelectedAfterPrototyping()
     {
@@ -93,7 +93,7 @@ public class PrototypeTests()
         Assert.NotNull(prototypeRamen.RamenIngredients);
         Assert.True(CompareTwoRamenIngredientLists(prototypeRamen.RamenIngredients, ingredientsToAdd));
     }
-    
+
     [Fact]
     public void Prototype_AddBroth_AddsSizIngredientsSelectedAsListAndOneIndividual()
     {
@@ -114,7 +114,7 @@ public class PrototypeTests()
         var prototypeRamen = ramenToTest.CloneRamenBowl();
 
         ingredientsToAdd.Add(ingredientToAddIndividually);
-        
+
         Assert.NotNull(prototypeRamen.RamenIngredients);
         Assert.True(CompareTwoRamenIngredientLists(prototypeRamen.RamenIngredients, ingredientsToAdd));
     }

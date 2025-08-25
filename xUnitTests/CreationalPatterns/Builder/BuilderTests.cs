@@ -10,46 +10,46 @@ public class BuilderTests()
     {
         Ramen ramenToTest = new();
         const RamenBroth brothToAdd = RamenBroth.Beef;
-        
+
         RamenBuilder.AddBroth(ramenToTest, brothToAdd);
-        
+
         Assert.True(ramenToTest.RamenBroth is brothToAdd);
     }
-    
+
     [Fact]
     public void Builder_AddBroth_AddsNoodleSelected()
     {
         Ramen ramenToTest = new();
         const RamenNoodle noodleToAdd = RamenNoodle.Soba;
-        
+
         RamenBuilder.AddNoodle(ramenToTest, noodleToAdd);
-        
+
         Assert.True(ramenToTest.RamenNoodle is noodleToAdd);
     }
-    
+
     [Fact]
     public void Builder_AddBroth_AddedIngredientIsNotNull()
     {
         Ramen ramenToTest = new();
         const RamenIngredient ingredientToAdd = RamenIngredient.Bamboo;
-        
+
         RamenBuilder.AddIngredient(ramenToTest, ingredientToAdd);
-        
+
         Assert.NotNull(ramenToTest.RamenIngredients);
     }
-    
+
     [Fact]
     public void Builder_AddBroth_AddsIngredientSelected()
     {
         Ramen ramenToTest = new();
         const RamenIngredient ingredientToAdd = RamenIngredient.Bamboo;
-        
+
         RamenBuilder.AddIngredient(ramenToTest, ingredientToAdd);
-        
+
         Assert.NotNull(ramenToTest.RamenIngredients);
         Assert.True(ramenToTest.RamenIngredients is [ingredientToAdd]);
     }
-    
+
     [Fact]
     public void Builder_AddBroth_AddsTwoIngredientsSelected()
     {
@@ -64,10 +64,10 @@ public class BuilderTests()
         RamenBuilder.AddIngredients(ramenToTest, ingredientsToAdd);
 
         Assert.NotNull(ramenToTest.RamenIngredients);
-        
+
         Assert.True(CompareTwoRamenIngredientLists(ramenToTest.RamenIngredients, ingredientsToAdd));
     }
-    
+
     [Fact]
     public void Builder_AddBroth_AddsFiveIngredientsSelected()
     {
@@ -86,7 +86,7 @@ public class BuilderTests()
         Assert.NotNull(ramenToTest.RamenIngredients);
         Assert.True(CompareTwoRamenIngredientLists(ramenToTest.RamenIngredients, ingredientsToAdd));
     }
-    
+
     [Fact]
     public void Builder_AddBroth_AddsSizIngredientsSelectedAsListAndOneIndividual()
     {
@@ -106,7 +106,7 @@ public class BuilderTests()
         RamenBuilder.AddIngredient(ramenToTest, ingredientToAddIndividually);
 
         ingredientsToAdd.Add(ingredientToAddIndividually);
-        
+
         Assert.NotNull(ramenToTest.RamenIngredients);
         Assert.True(CompareTwoRamenIngredientLists(ramenToTest.RamenIngredients, ingredientsToAdd));
     }
