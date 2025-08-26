@@ -17,7 +17,7 @@ Practicing Design Patterns in C#
 - Composite : ✅
 - Facade : ✅
 - Decorator : ✅
-- Flyweight : ❌
+- Flyweight : ✅
 - Proxy : ❌
 
 ## Behavioral Patterns
