@@ -18,7 +18,7 @@ Practicing Design Patterns in C#
 - Facade : ✅
 - Decorator : ✅
 - Flyweight : ✅
-- Proxy : ❌
+- Proxy : ✅
 
 ## Behavioral Patterns
 - Chain of Responsibility : ❌

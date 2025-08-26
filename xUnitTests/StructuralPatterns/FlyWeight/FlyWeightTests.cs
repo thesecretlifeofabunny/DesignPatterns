@@ -8,8 +8,8 @@ namespace xUnitTests.StructuralPatterns.FlyWeight;
 ///     vs
 ///     400000000 bytes with flyweight.
 ///
-/// Conclusion: FlyWeight does help :D, I'm somewhat surprised by this as I thuoght the dotnet compilier would apply
-/// performance tweaks regarding this although I just did debugging checking and not full release build checking nor did
+/// Conclusion: FlyWeight does help :D, I'm somewhat surprised by this as I thought the dotnet compiler would apply
+/// performance tweaks regarding this, although I just did debug checking and not full release build checking nor did
 /// I do any hot tests to bake in memory for real world memory usage.
 ///  
 /// Heavily influenced implementation by
