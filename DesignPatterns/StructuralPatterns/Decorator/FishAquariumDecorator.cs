@@ -3,7 +3,8 @@ using DesignPatterns.Classes.Aquarium;
 namespace DesignPatterns.StructuralPatterns.Decorator;
 
 /// <summary>
-/// Influenced by Youtu.be, 2025. https://youtu.be/j40kRwSm4VE (accessed Aug. 26, 2025).
+/// Influenced by [1]Derek Banas, “Decorator Design Pattern,” YouTube, Sep. 21, 2012.
+///     https://www.youtube.com/watch?v=j40kRwSm4VE (accessed Aug. 26, 2025).‌
 /// </summary>
 public class FishAquariumDecorator() : IAquarium
 {
