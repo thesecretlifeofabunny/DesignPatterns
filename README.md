@@ -16,6 +16,7 @@ Practicing Design Patterns in C#
 - Bridge : ✅
 - Composite : ✅
 - Facade : ✅
+- Decorator : ✅
 - Flyweight : ❌
 - Proxy : ❌
 
