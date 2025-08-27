@@ -9,7 +9,7 @@ namespace DesignPatterns.StructuralPatterns.Decorator;
 public class GoldfishDecorator() : FishAquariumDecorator()
 {
     public new double PriceOfAquarium { get; } = 69.99;
-    
+
     public new void AquariumDescription()
     {
         Console.WriteLine($"An aquarium of size {SizeOfAquariumInGallons} gallons for only {PriceOfAquarium} also" +

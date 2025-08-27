@@ -10,7 +10,7 @@ namespace DesignPatterns.StructuralPatterns.FlyWeight;
 /// </summary>
 public static class GameSupplementalInformationFlyweightFactory
 {
-    private static readonly Dictionary<string,GameSupplementalInformation> GameInformationDictionary = new();
+    private static readonly Dictionary<string, GameSupplementalInformation> GameInformationDictionary = new();
 
     public static GameSupplementalInformation GetGameSupplementalInformation(
         string genreOfGame, string producerName, string distributorName)

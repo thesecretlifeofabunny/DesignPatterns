@@ -12,12 +12,12 @@ public class ArcadeComposite(List<IArcade> allArcadeGames) : IArcade
 
     public void AddArcadeGamesToComposite(List<IArcade> listOfGamesToAdd)
     {
-        foreach (var game in from gameToCheck 
-                     in listOfGamesToAdd 
-                 where !AllArcadeGames.Contains(gameToCheck) 
-                     select gameToCheck) AllArcadeGames.Add(game);
+        foreach (var game in from gameToCheck
+                     in listOfGamesToAdd
+                             where !AllArcadeGames.Contains(gameToCheck)
+                             select gameToCheck) AllArcadeGames.Add(game);
     }
 
-    public int CalculatePrice() => AllArcadeGames.Select(game =>  game.CalculatePrice()).Sum();
-    
+    public int CalculatePrice() => AllArcadeGames.Select(game => game.CalculatePrice()).Sum();
+
 }

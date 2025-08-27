@@ -23,34 +23,34 @@ public class FlyWeightTests
     {
         // Arrange
         const int numberOfGamesToSell = 5_000_000;
-        VideoGameStore videoGameStore= new();
+        VideoGameStore videoGameStore = new();
 
         // ACT
 
         for (var i = 0; i < numberOfGamesToSell; i++)
         {
             videoGameStore.SellNewVideoGame(
-                "Meow", 
-                29.99, 
-                "cat", 
+                "Meow",
+                29.99,
+                "cat",
                 "dog",
                 "Valhalla"
             );
-            
+
             videoGameStore.SellNewVideoGame(
-                "Chirp", 
-                9.99, 
-                "rabbit", 
+                "Chirp",
+                9.99,
+                "rabbit",
                 "turtle",
                 "Mars"
             );
         }
 
         // Assert
-        
+
         Assert.Equal(numberOfGamesToSell * 2, videoGameStore._sellingGames.Count);
     }
-    
+
     [Fact]
     // DesignPatterns.Classes.Game.GameWithFlyWeightType	10000000	com.intellij.xdebugger.memory.ui.ClassesTable$DiffValue@5922ad04	400000000
     public void VideoGameStore_SellNewVideoGame_AddsAllTenMillionGamesUsesLessMemoryThanNonFlyWeight()
@@ -64,24 +64,24 @@ public class FlyWeightTests
         for (var i = 0; i < numberOfGamesToSell; i++)
         {
             videoGameStoreFlyWeight.SellNewVideoGame(
-                "Meow", 
-                29.99, 
-                "cat", 
+                "Meow",
+                29.99,
+                "cat",
                 "dog",
                 "Valhalla"
                 );
-            
+
             videoGameStoreFlyWeight.SellNewVideoGame(
-                "Chirp", 
-                9.99, 
-                "rabbit", 
+                "Chirp",
+                9.99,
+                "rabbit",
                 "turtle",
                 "Mars"
             );
         }
-        
+
         // Assert
-        
+
         Assert.Equal(numberOfGamesToSell * 2, videoGameStoreFlyWeight._sellingGames.Count);
     }
 }

@@ -5,7 +5,7 @@ namespace DesignPatterns.StructuralPatterns.Proxy;
 public class SchoolLibraryProxy()
 {
     private List<string> BannedBooks { get; } = ["Moby Dick", "Bluey", "Elmo"];
-    private readonly PublicLibrary _theSchoolsLibrary  = new();
+    private readonly PublicLibrary _theSchoolsLibrary = new();
 
     public void AddBookToLibrary(string bookToAdd)
     {

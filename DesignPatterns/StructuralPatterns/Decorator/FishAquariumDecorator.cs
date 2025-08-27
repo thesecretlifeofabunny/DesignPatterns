@@ -10,7 +10,7 @@ public class FishAquariumDecorator() : IAquarium
 {
     public int SizeOfAquariumInGallons { get; } = 10;
     public double PriceOfAquarium { get; } = 49.99;
-    
+
     public void AquariumDescription()
     {
         Console.WriteLine($"An aquarium of size {SizeOfAquariumInGallons} gallons for only {PriceOfAquarium}");

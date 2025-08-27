@@ -14,7 +14,7 @@ public class DecoratorTests
     {
         // Arrange
         BasicAquarium basicAquarium = new();
-        
+
         // ACT
         var priceOfAquarium = basicAquarium.PriceOfAquarium;
 

@@ -1,6 +1,6 @@
 namespace DesignPatterns.Classes.Game;
 
-public class Game(string name, double price,string genreOfGame, string producerName, string distributorName)
+public class Game(string name, double price, string genreOfGame, string producerName, string distributorName)
 {
     private string Name { get; init; } = name;
     private double Price { get; init; } = price;

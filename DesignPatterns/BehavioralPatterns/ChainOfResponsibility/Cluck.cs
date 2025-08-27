@@ -21,7 +21,7 @@ public class Cluck : IChainOfYaps
     {
         if (!string.Equals(MyYapCommand, yapCommand))
             return NextInYap is not null ? NextInYap.Yap(yapCommand) : string.Empty;
-        
+
         Console.WriteLine(MyYap);
         return MyYap;
     }
