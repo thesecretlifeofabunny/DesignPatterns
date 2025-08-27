@@ -8,20 +8,21 @@ namespace xUnitTests.BehavioralPatterns.ChainOfResponsibility;
 /// YouTube, Oct. 20, 2012. https://www.youtube.com/watch?v=jDX6x8qmjbA‌
 /// </summary>
 public class ChainOfResponsibilityTests
-{ 
+{
     private const string BarkYapCommand = "bark";
     private const string MeowYapCommand = "meow";
     private const string HissYapCommand = "hiss";
     private const string CluckYapCommand = "cluck";
-    
+
     private const string BarkYap = "Bark yap";
     private const string MeowYap = "Meow yap";
     private const string HissYap = "Hiss yap";
     private const string CluckYap = "Cluck yap";
-    
+
     [Fact]
     public void IChainOfYaps_Yap_ReturnsEmptyStringWithEmptyString()
     {
+        // Arrange
         Bark barkYap = new();
         Meow meowYap = new();
         Hiss hissYap = new();
@@ -30,11 +31,13 @@ public class ChainOfResponsibilityTests
         meowYap.SetNextChain(hissYap);
         hissYap.SetNextChain(cluckYap);
 
+        // Act
         var yapReturned = barkYap.Yap(string.Empty);
 
+        // Assert
         Assert.Equal(string.Empty, yapReturned);
     }
-        
+
     [Fact]
     public void IChainOfYaps_Yap_ReturnsBarkYapWithBarkCommand()
     {
@@ -50,7 +53,7 @@ public class ChainOfResponsibilityTests
 
         Assert.Equal(BarkYap, yapReturned);
     }
-    
+
     [Fact]
     public void IChainOfYaps_Yap_ReturnsMeowYapWithMeowCommand()
     {
@@ -66,7 +69,7 @@ public class ChainOfResponsibilityTests
 
         Assert.Equal(MeowYap, yapReturned);
     }
-    
+
     [Fact]
     public void IChainOfYaps_Yap_ReturnsHissYapWithHissCommand()
     {
@@ -82,7 +85,7 @@ public class ChainOfResponsibilityTests
 
         Assert.Equal(HissYap, yapReturned);
     }
-    
+
     [Fact]
     public void IChainOfYaps_Yap_ReturnsCluckYapWithCluckCommand()
     {
