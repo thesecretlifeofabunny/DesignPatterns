@@ -21,7 +21,7 @@ Practicing Design Patterns in C#
 - Proxy : ✅
 
 ## Behavioral Patterns
-- Chain of Responsibility : ❌
+- Chain of Responsibility : ✅
 - Command : ❌
 - Interpreter : ❌
 - Iterator : ❌
