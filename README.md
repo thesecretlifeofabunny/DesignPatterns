@@ -23,8 +23,6 @@ Practicing Design Patterns in C#
 ## Behavioral Patterns
 - Chain of Responsibility : ✅
 - Command : ✅
-- Interpreter : ❌
-- Iterator : ❌
 - Mediator : ❌
 - Memento : ❌
 - Observer : ❌
