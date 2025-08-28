@@ -11,6 +11,8 @@ namespace xUnitTests.StructuralPatterns.FlyWeight;
 /// Conclusion: FlyWeight does help :D
 ///  560000000 - 400000000 --> 160000000 / 10000000 --> 16 bits of difference
 /// That's 8 bits for each pointer that Game has in addition to GameWithFlyWeightType I believe
+/// Also the Dictionary for the possible VideoGameInformation makes it so only 2 objects need to be created
+/// saving on 16bits of reference pointers + additional allocation 
 /// Heavily influenced implementation by
 /// [1] Geekific, “The Flyweight Pattern Explained and Implemented in Java | Structural Design Patterns |
 ///     Geekific,” YouTube, Jan. 22, 2022. https://www.youtube.com/watch?v=qscOsQV-K14 (accessed Aug. 26, 2025).‌

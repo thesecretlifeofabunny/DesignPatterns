@@ -9,10 +9,10 @@ namespace xUnitTests.BehavioralPatterns.Command;
 /// </summary>
 public class CommandTests
 {
-    public const string SpeakOutput = "Bark";
-    public const string SitOutput = "I Sit";
-    public const string SpinOutput = "I Spin";
-    public const string GoDoItOutput = "I Pee";
+    private const string SpeakOutput = "Bark";
+    private const string SitOutput = "I Sit";
+    private const string SpinOutput = "I Spin";
+    private const string GoDoItOutput = "I Pee";
 
     [Fact]
     public void ICommand_TrainCommand_SpeakCommandGivesSpeakOutput()
