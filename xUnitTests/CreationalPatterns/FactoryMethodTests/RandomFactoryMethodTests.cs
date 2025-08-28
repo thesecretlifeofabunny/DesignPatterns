@@ -1,6 +1,6 @@
 using Xunit.Abstractions;
 
-namespace xUnitTests.CreationalPatterns.FactoryMethod;
+namespace xUnitTests.CreationalPatterns.FactoryMethodTests;
 
 public class RandomFactoryMethodTests(ITestOutputHelper testOutputHelper)
 {
