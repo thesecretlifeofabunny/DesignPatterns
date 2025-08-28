@@ -1,6 +1,6 @@
 using DesignPatterns.BehavioralPatterns.Command;
 
-namespace xUnitTests.BehavioralPatterns.Command;
+namespace xUnitTests.BehavioralPatterns;
 
 /// <summary>
 /// Heavily influenced implementation from

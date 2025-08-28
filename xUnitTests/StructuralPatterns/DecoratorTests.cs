@@ -1,7 +1,7 @@
 using DesignPatterns.Classes.Aquarium;
 using DesignPatterns.StructuralPatterns.Decorator;
 
-namespace xUnitTests.StructuralPatterns.Decorator;
+namespace xUnitTests.StructuralPatterns;
 
 /// <summary>
 /// Influenced by [1]Derek Banas, “Decorator Design Pattern,” YouTube, Sep. 21, 2012.

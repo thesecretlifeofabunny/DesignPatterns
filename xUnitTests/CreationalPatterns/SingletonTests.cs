@@ -1,6 +1,6 @@
 using DesignPatterns.CreationalPatterns.Singleton;
 
-namespace xUnitTests.CreationalPatterns.Singleton;
+namespace xUnitTests.CreationalPatterns;
 
 public class SingletonTests
 {

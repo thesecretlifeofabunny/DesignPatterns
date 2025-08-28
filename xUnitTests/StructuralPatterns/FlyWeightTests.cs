@@ -1,6 +1,6 @@
 using DesignPatterns.StructuralPatterns.FlyWeight;
 
-namespace xUnitTests.StructuralPatterns.FlyWeight;
+namespace xUnitTests.StructuralPatterns;
 
 /// <summary>
 /// Results:

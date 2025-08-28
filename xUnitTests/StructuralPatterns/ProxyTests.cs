@@ -1,6 +1,6 @@
 using DesignPatterns.StructuralPatterns.Proxy;
 
-namespace xUnitTests.StructuralPatterns.Proxy;
+namespace xUnitTests.StructuralPatterns;
 
 public class ProxyTests
 {

@@ -1,7 +1,7 @@
 using DesignPatterns.Classes.Ramen;
 using DesignPatterns.CreationalPatterns.Builder;
 
-namespace xUnitTests.CreationalPatterns.Builder;
+namespace xUnitTests.CreationalPatterns;
 
 public class BuilderTests()
 {

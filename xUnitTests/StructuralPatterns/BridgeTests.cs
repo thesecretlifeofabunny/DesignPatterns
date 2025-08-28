@@ -1,6 +1,6 @@
 using DesignPatterns.StructuralPatterns.Bridge;
 
-namespace xUnitTests.StructuralPatterns.Bridge;
+namespace xUnitTests.StructuralPatterns;
 
 /// <summary>
 /// I used the example from the following IEEE cited source.

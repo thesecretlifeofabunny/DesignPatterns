@@ -1,5 +1,10 @@
 namespace DesignPatterns.BehavioralPatterns.Mediator;
 
+/// <summary>
+/// Learnt from
+/// [1]Derek Banas, “Mediator Design Pattern,” YouTube, Oct. 29, 2012.
+/// https://www.youtube.com/watch?v=8DxIpdKd41A (accessed Aug. 28, 2025).
+/// </summary>
 public class ChildrensToyTradeMediator : IChildrensToyTradeMediator
 {
     private List<(Child, ChildrensToy)> ListOfCurrentToyOffers { get; } = [];

@@ -1,8 +1,7 @@
-using System.Runtime.InteropServices;
 using DesignPatterns.Classes.Appliances;
 using DesignPatterns.StructuralPatterns.Adapter;
 
-namespace xUnitTests.StructuralPatterns.Adapter;
+namespace xUnitTests.StructuralPatterns;
 
 public class AdapterTests
 {

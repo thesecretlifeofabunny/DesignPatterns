@@ -1,7 +1,7 @@
 using DesignPatterns.Classes.Arcade;
 using DesignPatterns.StructuralPatterns.Composite;
 
-namespace xUnitTests.StructuralPatterns.Composite;
+namespace xUnitTests.StructuralPatterns;
 
 /// <summary>
 /// Implementation influenced by

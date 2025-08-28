@@ -1,7 +1,7 @@
 using DesignPatterns.Classes.Botanical;
 using DesignPatterns.StructuralPatterns.Facade;
 
-namespace xUnitTests.StructuralPatterns.Facade;
+namespace xUnitTests.StructuralPatterns;
 
 public class FacadeTests
 {

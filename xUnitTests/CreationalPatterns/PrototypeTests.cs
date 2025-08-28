@@ -2,7 +2,7 @@ using DesignPatterns.Classes.Ramen;
 using DesignPatterns.CreationalPatterns.Builder;
 using DesignPatterns.CreationalPatterns.Prototype;
 
-namespace xUnitTests.CreationalPatterns.Builder;
+namespace xUnitTests.CreationalPatterns;
 
 public class PrototypeTests()
 {

@@ -1,6 +1,6 @@
 using DesignPatterns.BehavioralPatterns.ChainOfResponsibility;
 
-namespace xUnitTests.BehavioralPatterns.ChainOfResponsibility;
+namespace xUnitTests.BehavioralPatterns;
 
 /// <summary>
 /// Implementation Idea modified version of

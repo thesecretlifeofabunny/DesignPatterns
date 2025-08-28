@@ -1,7 +1,7 @@
 using DesignPatterns.Classes.Vehicle;
 using Xunit.Abstractions;
 
-namespace xUnitTests.CreationalPatterns.AbstractFactory;
+namespace xUnitTests.CreationalPatterns;
 
 public class AbstractFactoryTests(ITestOutputHelper testOutputHelper)
 {
