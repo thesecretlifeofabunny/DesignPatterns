@@ -21,7 +21,7 @@ public class MediatorTests
         ChildrensToy toyTwo = new("Bionicle");
         ChildrensToy toyThree = new("Bingo Plushee");
         ChildrensToy toyFour = new("Pokemon Card");
-        
+
         childOne.AddToyToOwnedToys(toyOne);
         childOne.AddToyToOwnedToys(toyTwo);
         childTwo.AddToyToOwnedToys(toyThree);
@@ -36,7 +36,7 @@ public class MediatorTests
         Assert.NotNull(childTwo.OwnedToys);
         Assert.DoesNotContain(toyOne, childTwo.OwnedToys.AsEnumerable());
     }
-    
+
     [Fact]
     public void ChildrensToyTradeMediator_MediateOffers_ChildAcceptingTradeGetsToyFromTrade()
     {
@@ -49,7 +49,7 @@ public class MediatorTests
         ChildrensToy toyTwo = new("Bionicle");
         ChildrensToy toyThree = new("Bingo Plushee");
         ChildrensToy toyFour = new("Pokemon Card");
-        
+
         childOne.AddToyToOwnedToys(toyOne);
         childOne.AddToyToOwnedToys(toyTwo);
         childTwo.AddToyToOwnedToys(toyThree);
