@@ -25,7 +25,7 @@ Practicing Design Patterns in C#
 - Command : ✅
 - Mediator : ✅
 - Memento : ❌
-- Observer : ❌
+- Observer : ✅
 - State : ✅
 - Strategy : ❌
 - Template Method : ❌
